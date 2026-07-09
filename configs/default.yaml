@@ -1,0 +1,28 @@
+project:
+  name: prompt_grounded_multiview_consistency
+  description: Evaluation of prompt-grounded multi-view consistency for generated 3D Gaussians.
+
+data:
+  renders_dir: data/renders
+  prompts_file: configs/prompts.json
+  output_dir: results
+
+views:
+  expected_views: [front, front_left, left, back_left, back, back_right, right, front_right]
+  min_views_per_sample: 4
+
+metrics:
+  compute_basic_image_stats: true
+  compute_pairwise_similarity: true
+  compute_placeholder_prompt_alignment: true
+  compute_placeholder_failure_labels: true
+
+ablation_groups:
+  - baseline
+  - high_temperature
+  - restricted_top_k
+  - position_token_noise
+  - feature_token_noise
+  - early_attention_off
+  - late_attention_off
+  - context_removed
