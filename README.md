@@ -1,6 +1,6 @@
 # Prompt-Grounded Multi-View Consistency for Generated 3D Gaussians
 
-This repository is a public, NDA-safe research scaffold for evaluating whether generated 3D Gaussian objects/scenes remain semantically and geometrically coherent across rendered viewpoints.
+This repository is a scaffold for evaluating whether generated 3D Gaussian objects/scenes remain semantically and geometrically coherent across rendered viewpoints.
 
 The project is motivated by a limitation of common generative-3D evaluation metrics such as FID, KID, COV, and MMD: these scores are useful for distribution-level appearance and geometry evaluation, but they do not directly measure whether prompt-specified entities, attributes, parts, and spatial relations remain stable across views.
 
